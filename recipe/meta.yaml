@@ -12,7 +12,7 @@ source:
   - cmakelists.patch
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None'))]
   missing_dso_whitelist:
     - "*/libcuda.*"    # [linux64 or ppc64le]
