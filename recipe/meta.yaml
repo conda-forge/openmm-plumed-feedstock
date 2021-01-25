@@ -13,7 +13,7 @@ source:
 
 build:
   number: 1
-  skip: true  # [win]
+  skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None'))]
   missing_dso_whitelist:
     - "*/libcuda.*"    # [linux64 or ppc64le]
     # For some reason conda fails to patch Test* executables linking to this library
