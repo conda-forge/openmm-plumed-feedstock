@@ -12,13 +12,10 @@ source:
   - cmakelists.patch
 
 build:
-  number: 0
-  skip: true  # [win]
+  number: 1
+  skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None'))]
   missing_dso_whitelist:
     - "*/libcuda.*"    # [linux64 or ppc64le]
-    # For some reason conda fails to patch Test* executables linking to this library
-    # However, they run locally :/
-    - "*/libOpenMMPlumed.dylib"  # [osx]
 
 requirements:
   build:
@@ -28,6 +25,7 @@ requirements:
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - cmake
     - make
+    - conda-build
   host:
     - python
     - pip
