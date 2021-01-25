@@ -49,3 +49,4 @@ if [[ "$target_platform" == osx* ]]; then
         -exec cp "{}" $PREFIX/share/openmm-plumed/tests/ \;
 else
     find . -name "Test*" -executable -type f -exec cp "{}" $PREFIX/share/openmm-plumed/tests/ \;
+fi
