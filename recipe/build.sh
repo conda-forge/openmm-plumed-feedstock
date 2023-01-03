@@ -36,7 +36,7 @@ mkdir -p build
 cd build
 cmake ${CMAKE_FLAGS} ${SRC_DIR}
 make -j$CPU_COUNT install
-make -j$CPU_COUNT PythonInstall VERBOSE=1
+make -j$CPU_COUNT PythonInstall
 
 # Undo header relocation
 test -d ${PREFIX}/include/plumed/lepton.bak && mv ${PREFIX}/include/plumed/lepton.bak ${PREFIX}/include/plumed/lepton
