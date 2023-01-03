@@ -37,7 +37,7 @@ requirements:
   run:
     - python
     - {{ pin_compatible('openmm', min_pin='x.x', max_pin='x.x') }}
-    - plumed >=2.7
+    - plumed 2.7
     - ocl-icd  # [linux]
     - ocl-icd-system  # [linux]
     - khronos-opencl-icd-loader  # [osx]
