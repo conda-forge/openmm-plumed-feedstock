@@ -26,6 +26,7 @@ requirements:
     - cmake
     - make
     - conda-build
+    - sysroot_linux-64 ==2.17  # to fix: `libOpenMM.so: undefined reference to `memcpy@GLIBC_2.14'`
   host:
     - python
     - pip
