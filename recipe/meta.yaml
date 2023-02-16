@@ -31,7 +31,7 @@ requirements:
     - pip
     - openmm
     - plumed 2.7
-    - swig 
+    - swig <4.1
     - ocl-icd  # [linux]
     - khronos-opencl-icd-loader  # [osx]
   run:
