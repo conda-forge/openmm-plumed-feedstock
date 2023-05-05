@@ -13,7 +13,7 @@ source:
     - fix-pip-install.patch
 
 build:
-  number: 7
+  number: 8
   skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None', '10.2'))]
   missing_dso_whitelist:
     - "*/libcuda.*"    # [linux64 or ppc64le]
