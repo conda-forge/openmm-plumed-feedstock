@@ -8,9 +8,6 @@ package:
 source:
   url: https://github.com/openmm/openmm-plumed/archive/v{{ version }}.tar.gz
   sha256: 906b6988f09ac3e28b2ce79e4682f483960c7c2caff19e4c9f99e35493606890
-  # patches:
-  #   - cmakelists.patch
-  #   - fix-pip-install.patch
 
 build:
   number: 10
