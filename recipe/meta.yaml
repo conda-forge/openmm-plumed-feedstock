@@ -11,7 +11,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None', '10.2'))]
+  skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None'))]
   missing_dso_whitelist:
     - "*/libcuda.*"    # [linux64 or ppc64le]
 
