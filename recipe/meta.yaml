@@ -10,8 +10,8 @@ source:
   sha256: 906b6988f09ac3e28b2ce79e4682f483960c7c2caff19e4c9f99e35493606890
 
 build:
-  number: 10
-  skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None', '10.2'))]
+  number: 0
+  skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None'))]
   missing_dso_whitelist:
     - "*/libcuda.*"    # [linux64 or ppc64le]
 
