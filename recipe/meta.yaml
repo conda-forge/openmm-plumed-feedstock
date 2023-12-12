@@ -28,8 +28,8 @@ requirements:
     - python
     - pip
     - openmm
-    - plumed 2.7
-    - swig <4.1
+    - plumed
+    - swig
     - ocl-icd  # [linux]
     - khronos-opencl-icd-loader  # [osx]
   run:
