@@ -10,8 +10,8 @@ source:
   sha256: 41687553ffe6a03df5938496003755db27649bf1ab9de8548e332a6eb436a15c
 
 build:
-  number: 0
-  skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None'))]
+  number: 1
+  skip: true  # [not osx]
   missing_dso_whitelist:
     - "*/libcuda.*"    # [linux64 or ppc64le]
 
@@ -21,6 +21,8 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('cuda') }}  # [linux and cuda_compiler_version != 'None']
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cmake
     - make
     - conda-build  # [osx]
