@@ -1,16 +1,16 @@
 {% set name = "openmm-plumed" %}
-{% set version = "2.0.1" %}
+{% set version = "2.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/openmm/openmm-plumed/archive/v{{ version }}.tar.gz
-  sha256: cd812b5866d3ff93875604be6cd29eae70243db1c2e4b68f8e9658cfd3497e88
+  git_url: https://github.com/openmm/{{ name }}.git
+  git_rev: "f09aa14"
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None'))]
   missing_dso_whitelist:
     - "*/libcuda.*"    # [linux64 or ppc64le]
