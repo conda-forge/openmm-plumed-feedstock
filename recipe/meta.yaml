@@ -1,16 +1,16 @@
 {% set name = "openmm-plumed" %}
-{% set version = "2.0.1" %}
+{% set version = "2.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/openmm/openmm-plumed/archive/v{{ version }}.tar.gz
-  sha256: cd812b5866d3ff93875604be6cd29eae70243db1c2e4b68f8e9658cfd3497e88
+  git_url: https://github.com/openmm/{{ name }}.git
+  git_rev: "95bfd46"
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None'))]
   missing_dso_whitelist:
     - "*/libcuda.*"    # [linux64 or ppc64le]
@@ -20,6 +20,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ compiler('cuda') }}  # [linux and cuda_compiler_version != 'None']
+    - {{ stdlib("c") }}
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
@@ -36,6 +37,7 @@ requirements:
     - swig                                   # [not arm64]
     - ocl-icd  # [linux]
     - khronos-opencl-icd-loader  # [osx]
+    - setuptools
   run:
     - python
     - {{ pin_compatible('openmm', min_pin='x.x', max_pin='x.x') }}
