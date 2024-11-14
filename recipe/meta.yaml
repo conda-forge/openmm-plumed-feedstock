@@ -20,6 +20,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ compiler('cuda') }}  # [linux and cuda_compiler_version != 'None']
+    - {{ stdlib("c") }}
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
@@ -36,6 +37,7 @@ requirements:
     - swig                                   # [not arm64]
     - ocl-icd  # [linux]
     - khronos-opencl-icd-loader  # [osx]
+    - setuptools
   run:
     - python
     - {{ pin_compatible('openmm', min_pin='x.x', max_pin='x.x') }}
