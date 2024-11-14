@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/openmm/{{ name }}.git
-  git_rev: "f09aa14"
+  git_rev: "95bfd46"
 
 build:
   number: 0
