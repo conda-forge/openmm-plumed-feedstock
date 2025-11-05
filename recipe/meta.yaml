@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/openmm/{{ name }}.git
-  git_rev: "95bfd46"
+  git_rev: "0a8ba16"
 
 build:
   number: 1
@@ -25,14 +25,14 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - swig                                   # [build_platform != target_platform]
-    - openmm >=8.1.0                         # [build_platform != target_platform]
+    - openmm >=8.4.0                         # [build_platform != target_platform]
     - cmake
     - make
     - conda-build  # [osx]
   host:
     - python
     - pip
-    - openmm >=8.1.0
+    - openmm >=8.4.0
     - plumed
     - swig                                   # [not arm64]
     - ocl-icd  # [linux]
