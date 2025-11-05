@@ -10,7 +10,7 @@ source:
   git_rev: "95bfd46"
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None'))]
   missing_dso_whitelist:
     - "*/libcuda.*"    # [linux64 or ppc64le]
