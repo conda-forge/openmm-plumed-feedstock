@@ -28,7 +28,7 @@ requirements:
     - openmm >=8.4.0                         # [build_platform != target_platform]
     - cmake
     - make
-    - conda-build  # [osx]
+#    - conda-build  # [osx]
   host:
     - python
     - pip
