@@ -12,7 +12,6 @@ source:
 build:
   number: 1
   skip: true  # [win or (linux and cuda_compiler_version in (undefined, 'None'))]
-  skip: true  # [osx and x86 and py>=314]
   missing_dso_whitelist:
     - "*/libcuda.*"    # [linux64 or ppc64le]
 
@@ -29,7 +28,7 @@ requirements:
     - openmm >=8.4.0                         # [build_platform != target_platform]
     - cmake
     - make
-    - conda-build  # [osx]
+    - conda-build  # [osx and x86]
   host:
     - python
     - pip
